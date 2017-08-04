@@ -1,0 +1,35 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>생활코딩</th>
+      <th>멋사중앙</th>
+      <th>플러닝+</th>
+      <th>해커톤+</th>
+      <th>솔로러닝</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div = "td_control">
+      <tr>
+          <th scope="row"><%= @schedule.liveCoding %></th>
+          <td><%= @schedule.uniLion %></td>
+          <td><%= @schedule.fLearning %></td>
+          <td><%= @schedule.hackerThon %></td>
+          <td><%= @schedule.soloRun %></td>
+      </tr>
+    </div>
+  </tbody>
+</table>
+<%= form_tag schedule_path(@schedule.id), method:"patch" do %>
+  <div class = "ddd" >
+    <input style = "width:15%;"class = "form-control" type="text" name="liveCoding" value="">
+    <input style = "width:15%;"class = "form-control" type="text" name="uniLion" value="">
+    <input style = "width:15%;"class = "form-control" type="text" name="fLearning" value="">
+    <input style = "width:15%;"class = "form-control" type="text" name="hackerThon" value="">
+    <input style = "width:15%;"class = "form-control" type="text" name="soloRun" value="">
+  </div>
+  <div id = "submit_edit" class = "mt-5">
+    <input style = "width:30%;" class = "form-control mt-5" type="submit" value="작성완료">
+  </div>
+<% end %>

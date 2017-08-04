@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>날짜</th>
+        <th>생활코딩</th>
+        <th>유니라이온</th>
+        <th>Flearning</th>
+        <th>해커톤</th>
+        <th>solo_run</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @schedules.each do |sche| %>
+        <tr>
+          <th scope="row"><%= link_to sche.date, edit_schedule_path(sche.id), method:"get" %></th>
+          <% if sche.liveCoding == nil  %>
+            <td colspan="5"><%= link_to "입력하러가기", edit_schedule_path(sche.id), method:"get" %></td>
+          <% else %>
+            <td><%= sche.liveCoding %></td>
+            <td><%= sche.uniLion %></td>
+            <td><%= sche.fLearning %></td>
+            <td><%= sche.hackerThon %></td>
+            <td><%= sche.soloRun %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

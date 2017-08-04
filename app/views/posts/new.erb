@@ -1,0 +1,25 @@
+
+<%= form_tag posts_path, class:"sign_up" do %>
+  <h1 id ="sign_up">회원가입</h1>
+  <div class="detail">
+    <p>이름</p>
+    <input class = "btn" type="text" name="name">
+  </div>
+  <br/>
+  <div class="detail">
+    <p>이메일</p>
+  <input class = "btn" type="email" name="email">
+  </div>
+  <br/>
+  <div class="detail">
+    <p>비밀번호</p>
+  <input class = "btn" type="password" name="password" placeholder="6자이상 입력">
+  </div>
+  <br/>
+  <div class="detail">
+    <p>비밀번호 확인</p>
+  <input class = "btn" type="password" name="password_confirmation" placeholder="6자이상 입력">
+  </div>
+  <br/>
+  <input id = "submit" class = "btn" type="submit" value="입력완료">
+<% end %>
